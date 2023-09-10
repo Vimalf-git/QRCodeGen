@@ -15,9 +15,12 @@ const generator=()=>{
     }}
 
 const qrdownload=()=>{
+    const qr_img=document.getElementById("qr-img").src;
+if(qr_img==""){
+alert("please generate QR and then Download");
+}else{
    const chooseformat= document.getElementById("inlineFormCustomSelect").value;
   const qrdown= document.getElementById("qrdown-btn");
-  const qr_img=document.getElementById("qr-img").src;
   console.log(qr_img);
     qrdown.href=qr_img;
-}
+}}
