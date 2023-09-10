@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./qrcodegen.css" rel="styleSheet">
+    <link href="./bootstrap-5.3.1-dist/css/bootstrap.min.css" rel="styleSheet">
+</head>
+
+<body>
+    <div class="main">
+
+
+        <!-- header -->
+        <header>
+            <p>Online QR Generator</p>
+        </header>
+        <!-- section -->
+        <section class="con-body">
+            <div >
+                <form class="box">
+                <div class="qrvalue-sec">
+                    <label for="qrvalue" class="qrvalue-label">Enter the  Data:</label>
+                <input type="text" id="qrvalue" class="qrvalue" name="qrvalue">
+                </div>
+                <div class="w-h--inputcl">
+                    <div class="winput-cl">
+                        <label>width</label>
+                        <input type="text" class="widthvalue" id="widthvalue">
+                    </div>
+                    <div class="hinput-cl">
+                        
+                        <label>Height</label>
+                        <input type="text" class="heightvalue" id="heightvalue">
+                    </div>
+
+                   
+                </div>
+                <div class="color-sec">
+                    <div>
+                        <label>QR Color</label>
+                        <input type="color" id="color-pic" class="color-pic">
+                    </div>
+                    <div>
+                        <label>Background Color</label>
+                    <input type="color" id="color-pic" class="color-pic">
+                    </div>
+                </div>
+                <div class="format-choose">
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Choose Format</option>
+                        <option value="JPG">JPG</option>
+                        <option value="SVG">SVG</option>
+                        <option value="PNG">PNG</option>
+                      </select>
+                </div>
+                <div class="btn-sec">
+                    <a class="btn btn-primary gen-btn" onclick="generator()">QR Generator</a>
+                    <a class="btn btn-success qrdown-btn" id="qrdown-btn" download  onclick="qrdownload()" >Download</a>
+                </div>
+            </form>
+            </div>
+
+            <div class="qr-dis">
+                <img class="qr-img" id="qr-img">
+
+                </img>
+            </div>
+        </section>
+
+
+
+
+    </div>
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="./qrcodegen.js"></script>
+</body>
+
+</html>
